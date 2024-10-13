@@ -1,12 +1,10 @@
 import "./App.css";
-import Form from "./components/Form/Form.tsx";
+import Chat from "./components/Chat/Chat.tsx";
 
 const App = () => {
-  const url = "http://146.185.154.90:8000/messages";
-
   return (
     <>
-      <Form />
+      <Chat />
     </>
   );
 };
