@@ -5,7 +5,7 @@ import Form from '../Form/Form.tsx';
 const Chat = () => {
   const url = 'http://146.185.154.90:8000/messages';
   const [messages, setMessages] = useState<IMessage[]>([]);
-  let lastMessageDatetime = '';
+  let lastMessageDatetime: string | null = null;
 
   const fetchData = async () => {
     try {
@@ -28,7 +28,7 @@ const Chat = () => {
   };
 
   const fetchNewMessages = async () => {
-    if (lastMessageDatetime) {
+    if (lastMessageDatetime !== null) {
       try {
         const response = await fetch(
           'http://146.185.154.90:8000/messages?datetime=' + lastMessageDatetime,
