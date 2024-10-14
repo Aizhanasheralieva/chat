@@ -1,10 +1,10 @@
-import "./App.css";
-import Chat from "./components/Chat/Chat.tsx";
+import './App.css';
+import Chat from './components/Chat/Chat.tsx';
 
 const App = () => {
   return (
     <>
-      <Chat />
+      <Chat/>
     </>
   );
 };
